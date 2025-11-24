@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  mysql_master:
+    build: ./master
+    container_name: mysql_master
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+    ports:
+      - "3306:3306"
+    networks:
+      - replication
+
+  mysql_slave:
+    build: ./slave
+    container_name: mysql_slave
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+    ports:
+      - "3307:3306"
+    depends_on:
+      - mysql_master
+    networks:
+      - replication
+
+networks:
+  replication:
