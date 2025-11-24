@@ -48,7 +48,7 @@ docker compose up -d
 
 Проверка состояния контейнеров:
 
-screenshots/1_containers.png
+![Cостояния контейнеров](screenshots/1_containers.png)
 
 ### 3. Настройка master-контейнера
 
@@ -82,7 +82,7 @@ CREATE TABLE t1(id INT PRIMARY KEY, msg VARCHAR(50));
 INSERT INTO t1 VALUES (1, 'Hello from MASTER');
 ```
 
-screenshots/2_master_data.png
+![Мастер](screenshots/2_master_data.png)
 
 ### 4. Настройка slave-контейнера
 
@@ -114,7 +114,7 @@ docker exec -it mysql_slave mysql -prootpass
 SHOW REPLICA STATUS\G
 ```
 
-screenshots/3_replica_status.png
+![Реплика статус](screenshots/3_replica_status.png)
 
 ### 5. Проверка репликации
 
@@ -126,7 +126,7 @@ Copy
 USE demo;
 SELECT * FROM t1;
 ```
-screenshots/4_slave_select.png
+![Проверка репликации](screenshots/4_slave_select.png)
 
 ### 6. Остановка окружения
 
