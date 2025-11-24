@@ -26,6 +26,7 @@
 
 ### 1. Структура проекта
 
+```text
 SQL_Replica_1/
 ├── docker-compose.yml
 ├── master/
@@ -33,10 +34,10 @@ SQL_Replica_1/
 │   ├── master.cnf
 │   └── master.sql
 └── slave/
-├── Dockerfile
-├── slave.cnf
-└── slave.sql
-
+    ├── Dockerfile
+    ├── slave.cnf
+    └── slave.sql
+```
 
 ### 2. Запуск контейнеров
 
